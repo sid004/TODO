@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <script src="https://kit.fontawesome.com/062b01a903.js" crossorigin="anonymous"></script>
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: "Montserrat", sans-serif;
+            background: #f2f2f2;
+        }
+
+        button, input{
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+        }
+        .todo-box{
+            background-color: #FFFFFF;
+            width: 500px;
+            height: 400px;
+            position: relative;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .todo-input-box, .list{
+            position: absolute;
+            display: flex;
+    
+            width: 86%;
+        }
+
+        #todo-input{
+            width: 100%;
+            padding: 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border: none;
+            outline : none;
+            background-color: #f2f2f2;
+        }
+
+        #todo-btn{
+            width: 20%;
+            padding: 20px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: #b3b3b3;
+            color: #FFFFFF;
+        }
+
+        .list{
+            top: 25%;
+        }
+
+        .todo-list{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul li{
+            list-style-type: none;
+        }
+
+        .list ul{
+            width: 100%;
+            padding: 0 !important;
+        }
+
+        .fa-solid{
+            font-size: 20px;
+        }
+
+        ul li{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .todoBtn{
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        #popup{
+            position: absolute;
+            z-index: 99;
+            background-color: black;
+            width: 200px;
+            padding: 40px;
+            display: none;
+        }
+
+        .editTodo{
+            background-color: #F2f2f2;
+            padding: 8px;
+            width: 100%;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page-head">
+        <h1>TODO</h1>
+    </div>
+    
+    <div class="todo-box">
+        <div class="todo-input-box">
+            <input type="text" id="todo-input">
+            <button id="todo-btn" >Submit</button>
+        </div>
+        
+
+        <div class="list">
+            <ul id="displaytodo">
+
+            </ul>
+        </div>
+
+        <div id="popup">
+            <input type="text" id="editText">
+
+            <button type="button">Save</button>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
